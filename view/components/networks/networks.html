@@ -1,0 +1,343 @@
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>BETRANCE</b></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-theme">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green">You have 4 pending tasks</p>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">DashGum Admin Panel</div>
+                                    <div class="percent">40%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Database Update</div>
+                                    <div class="percent">60%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Product Development</div>
+                                    <div class="percent">80%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Payments Sent</div>
+                                    <div class="percent">70%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                        <span class="sr-only">70% Complete (Important)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="external">
+                            <a href="#">See All Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-theme">5</span>
+                    </a>
+                </li>
+                <!-- inbox dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" ng-link="welcome()">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a ng-link="settings()"><img src="{{ networks.me.img }}" class="img-circle" width="140"></a></p>
+                <h5 class="centered">{{ networks.me.name }}</h5>
+
+                <li class="mt">
+                    <a ng-link="news()">
+                        <i class="fa fa-rss"></i>
+                        <span>PEOPLE's BEACON FLOW</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="active" ng-link="networks()">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Networks</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="beacons()">
+                        <i class="fa fa-tag"></i>
+                        <span>Beacons</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="settings()">
+                        <i class="fa fa-cogs"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="friends()">
+                        <i class="fa fa-users"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="charts()">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="morris.html">Morris</a></li>
+                        <li><a  href="chartjs.html">Chartjs</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> MY Current Networks</h3>
+            <div class="row mt">
+                <div class="col-lg-12">
+
+                    <div href="#aboutModal" data-toggle="modal" data-target="#myModal" ng-repeat="my_networks in networks.my_Networks" class="col-lg-4 col-md-4 col-sm-4 mb">
+                        <div class="content-panel pn" ng-link="profile()">
+                            <div id="profile-01" style="
+                                background: url({{ my_networks.img }}) no-repeat center top;
+                                margin-top: -15px;
+                                background-attachment: relative;
+                                background-position: center center;
+                                min-height: 150px;
+                                width: 100%;
+                                -webkit-background-size: 100%;
+                                -moz-background-size: 100%;
+                                -o-background-size: 100%;
+                                background-size: 100%;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;">
+                            </div>
+                            <div class="profile-02 centered">
+                                <p>@{{ my_networks.name }} IS PART OF YOUR NETWORK</p>
+                            </div>
+                            <div class="centered">
+                                <h6>@{{ my_networks.name }} </h6>
+                            </div>
+                        </div><! --/content-panel -->
+                    </div>
+
+                </div>
+            </div>
+
+            <br/>
+            <br/>
+
+            <h3><i class="fa fa-angle-right"></i> ALL Current Networks</h3>
+            <div class="row mt">
+                <div class="col-lg-12">
+
+                    <div ng-repeat="all_networks in networks.all_Networks" class="col-lg-4 col-md-4 col-sm-4 mb">
+                        <div class="content-panel pn" >
+                            <div id="profile-gym" style="
+                                background: url({{ all_networks.img }}) no-repeat center top;
+                                margin-top: -15px;
+                                background-attachment: relative;
+                                background-position: center center;
+                                min-height: 150px;
+                                width: 100%;
+                                -webkit-background-size: 100%;
+                                -moz-background-size: 100%;
+                                -o-background-size: 100%;
+                                background-size: 100%;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;">
+
+                            </div>
+                            <div class="profile-01 centered" ng-click="networks.add(all_networks)">
+                                <p>ENTER @{{ all_networks.name }}</p>
+                            </div>
+                            <div class="centered">
+                                <h6>@{{ all_networks.name }}</h6>
+                            </div>
+                        </div><! --/content-panel -->
+                    </div>
+
+                </div>
+            </div>
+
+        </section><! --/wrapper -->
+
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            2015 - betrance by GET-NET
+            <a href="panels.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+
+
+
+
+<!-- Modal -->
+
+<!-- Add Networks -->
+<div class="modal" id="addNetworks" tabindex="-1" role="dialog" aria-labelledby="setAddNetworksLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span></button>
+
+                <form action="">
+                    <legend>Add Network</legend>
+                    <div class="form-group">
+                        <label for="add_founder">Founder</label>
+                        <input id="add_founder" value='' placeholder="Founder" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_network">Netzwerk</label>
+                        <input value='' id="add_network" placeholder="Network" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_description">Description</label>
+                        <input value='' id="add_description" placeholder="Description" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_beacons">Beacons</label>
+                        <input id="add_beacons" value='' placeholder="Beacons" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-danger btn-cancel-action">Cancel</button>
+                        <input type="submit" class="btn btn-success btn-login-submit" value="Add" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Add Networks -->
+
+<!-- Edit Networks -->
+<div class="modal" id="editNetworks" tabindex="-1" role="dialog" aria-labelledby="setEditNetworksLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span></button>
+
+                <form action="">
+                    <legend>Edit Network</legend>
+                    <div class="form-group">
+                        <label for="add_founder">Founder</label>
+                        <input id="del_founder" value='' placeholder="Founder" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_network">Netzwerk</label>
+                        <input value='' id="del_network" placeholder="Network" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_description">Description</label>
+                        <input value='' id="del_description" placeholder="Description" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_beacons">Beacons</label>
+                        <input id="del_beacons" value='' placeholder="Beacons" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-danger btn-cancel-action">Cancel</button>
+                        <input type="submit" class="btn btn-success btn-login-submit" value="Edit" />
+                        <input type="submit" class="btn btn-warning btn-login-submit" value="Remove Network" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Edit Networks -->
+
+<!-- / Modal -->

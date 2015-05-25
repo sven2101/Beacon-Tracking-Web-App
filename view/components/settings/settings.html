@@ -1,0 +1,265 @@
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a ng-link="news()" class="logo"><b>BETRANCE</b></a>
+        <!--logo end-->
+
+        </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" ng-link="welcome()">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a ng-link="settings()"><img src="{{ settings.me.img }}" class="img-circle" width="140"></a></p>
+                <h5 class="centered">{{ settings.me.name }}</h5>
+
+                <li class="mt">
+                    <a ng-link="news()">
+                        <i class="fa fa-rss"></i>
+                        <span>PEOPLE's BEACON FLOW</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="networks()">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Networks</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="beacons()">
+                        <i class="fa fa-tag"></i>
+                        <span>Beacons</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="active" ng-link="settings()">
+                        <i class="fa fa-cogs"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="friends()">
+                        <i class="fa fa-users"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="charts()">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="morris.html">Morris</a></li>
+                        <li><a  href="chartjs.html">Chartjs</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> Settings </h3>
+
+            <div class="well">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
+                    <li><a href="#profile" data-toggle="tab">Password</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active in" id="home">
+                        <form id="tab">
+
+                            <br/>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-lg-8" width="300px">
+                                    <label>Name</label>
+                                    <br/>
+                                    <input type="text" value="{{ settings.me.name }}" class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>Email</label>
+                                    <br/>
+                                    <input type="text" value="{{ settings.me.email }}" class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>Password</label>
+                                    <br/>
+                                    <input type="text" value="{{ settings.me.password }}" class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>Profil Picture</label>
+                                    <br/>
+                                    <input type="text" value="{{ settings.me.img }}" class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <br/>
+                            <br/>
+
+                            <div>
+                                <button class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="profile">
+                        <form id="tab2">
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label>New Password</label>
+                                    <br/>
+                                    <input type="text" value="{{ settings.me.password }}" class="input-xlarge">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <br/>
+
+                            <button class="btn btn-primary">Update</button>
+
+                        </form>
+                    </div>
+                </div>
+
+        </section><! --/wrapper -->
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            2015 - betrance by GET-NET
+            <a href="panels.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+
+
+
+
+<!-- Modal -->
+
+<!-- Add Networks -->
+<div class="modal" id="addNetworks" tabindex="-1" role="dialog" aria-labelledby="setAddNetworksLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span></button>
+
+                <form action="">
+                    <legend>Add Network</legend>
+                    <div class="form-group">
+                        <label for="add_founder">Founder</label>
+                        <input id="add_founder" value='' placeholder="Founder" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_network">Netzwerk</label>
+                        <input value='' id="add_network" placeholder="Network" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_description">Description</label>
+                        <input value='' id="add_description" placeholder="Description" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_beacons">Beacons</label>
+                        <input id="add_beacons" value='' placeholder="Beacons" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-danger btn-cancel-action">Cancel</button>
+                        <input type="submit" class="btn btn-success btn-login-submit" value="Add" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Add Networks -->
+
+<!-- Edit Networks -->
+<div class="modal" id="editNetworks" tabindex="-1" role="dialog" aria-labelledby="setEditNetworksLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen"><span aria-hidden="true">&times;</span></button>
+
+                <form action="">
+                    <legend>Edit Network</legend>
+                    <div class="form-group">
+                        <label for="add_founder">Founder</label>
+                        <input id="del_founder" value='' placeholder="Founder" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_network">Netzwerk</label>
+                        <input value='' id="del_network" placeholder="Network" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_description">Description</label>
+                        <input value='' id="del_description" placeholder="Description" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="add_beacons">Beacons</label>
+                        <input id="del_beacons" value='' placeholder="Beacons" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-danger btn-cancel-action">Cancel</button>
+                        <input type="submit" class="btn btn-success btn-login-submit" value="Edit" />
+                        <input type="submit" class="btn btn-warning btn-login-submit" value="Remove Network" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Edit Networks -->
+
+<!-- / Modal -->

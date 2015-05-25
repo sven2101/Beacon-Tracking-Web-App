@@ -1,0 +1,174 @@
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>BETRANCE</b></a>
+        <!--logo end-->
+
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" ng-link="welcome()">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a ng-link="settings()"><img src="{{ news.me.img }}" class="img-circle" width="140"></a></p>
+                <h5 class="centered">{{ news.me.name }}</h5>
+
+                <li class="mt">
+                    <a class="active" ng-link="news()">
+                        <i class="fa fa-rss"></i>
+                        <span>PEOPLE's BEACON FLOW</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="networks()">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Networks</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="beacons()">
+                        <i class="fa fa-tag"></i>
+                        <span>Beacons</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="settings()">
+                        <i class="fa fa-cogs"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="friends()">
+                        <i class="fa fa-users"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="charts()">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="morris.html">Morris</a></li>
+                        <li><a  href="chartjs.html">Chartjs</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapperflow">
+
+            <div class="row">
+                <div class="col-lg-20 main-chart">
+
+                    <div class="col-lg-20 ds">
+                        <!--COMPLETED ACTIONS DONUTS CHART-->
+                        <h3>PEOPLE's BEACON FLOW</h3>
+                        <br/>
+                        <!-- First Action -->
+                        <div class="desc">
+                            <div class="thumb">
+                                <span><a href="#"><img src="assets/img/users/andreas_foitzik.jpg" class="img-circle" width="60"></a></span>
+                            </div>
+                            <div class="details">
+                                <p><muted>2 Minutes Ago</muted><br/>
+                                    <a>Andreas Foitzik</a> subscribed to your newsletter.<br/>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Second Action -->
+                        <div class="desc">
+                            <div class="thumb">
+                                <span><a href="#"><img src="assets/img/users/betti_key.jpg" class="img-circle" width="60"></a></span>
+                            </div>
+                            <div class="details">
+                                <p><muted>2 Minutes Ago</muted><br/>
+                                    <a>Betti Key</a> subscribed to your newsletter.<br/>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Third Action -->
+                        <div class="desc">
+                            <div class="thumb">
+                                <span><a href="#"><img src="assets/img/users/sven_jaschkewitz.jpg" class="img-circle" width="60"></a></span>
+                            </div>
+                            <div class="details">
+                                <p><muted>2 Minutes Ago</muted><br/>
+                                    <a>Sven Jaschkewitz</a> subscribed to your newsletter.<br/>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Fourth Action -->
+                        <div class="desc">
+                            <div class="thumb">
+                                <span><a href="#"><img src="assets/img/users/simon_foitzik.jpg" class="img-circle" width="60"></a></span>
+                            </div>
+                            <div class="details">
+                                <p><muted>2 Minutes Ago</muted><br/>
+                                    <a>Simon Foitzik</a> subscribed to your newsletter.<br/>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Fifth Action -->
+                        <div class="desc">
+                            <div class="thumb">
+                                <span><a href="#"><img src="assets/img/users/max_hermann.jpg" class="img-circle" width="60"></a></span>
+                            </div>
+                            <div class="details">
+                                <p><muted>2 Minutes Ago</muted><br/>
+                                    <a>Max Hermann</a> subscribed to your newsletter.<br/>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div><!-- /col-lg-3 -->
+
+                </div><!-- /col-lg-9 END SECTION MIDDLE -->
+            </div><! --/row -->
+        </section>
+    </section>
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            2015 - betrance by GET-NET
+            <a href="index.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>

@@ -1,0 +1,219 @@
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <a href="index.html" class="logo"><b>BETRANCE</b></a>
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-theme">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green">You have 4 pending tasks</p>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">DashGum Admin Panel</div>
+                                    <div class="percent">40%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        <span class="sr-only">40% Complete (success)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Database Update</div>
+                                    <div class="percent">60%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        <span class="sr-only">60% Complete (warning)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Product Development</div>
+                                    <div class="percent">80%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#">
+                                <div class="task-info">
+                                    <div class="desc">Payments Sent</div>
+                                    <div class="percent">70%</div>
+                                </div>
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                        <span class="sr-only">70% Complete (Important)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="external">
+                            <a href="#">See All Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-theme">5</span>
+                    </a>
+                </li>
+                <li id="" class="dropdown">
+                    <a data-toggle="modal" data-target="#addNetworks" class="btn btn-skin btn-login scroll"><i class="fa fa-plus-circle"></i></a>
+                </li>
+                <!-- inbox dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" ng-link="welcome()">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a ng-link="settings()"><img src="{{ networks.me.img }}" class="img-circle" width="140"></a></p>
+                <h5 class="centered">{{ networks.me.name }}</h5>
+
+                <li class="mt">
+                    <a ng-link="news()">
+                        <i class="fa fa-rss"></i>
+                        <span>PEOPLE's BEACON FLOW</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="active" ng-link="networks()">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Networks</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="beacons()">
+                        <i class="fa fa-tag"></i>
+                        <span>Beacons</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="settings()">
+                        <i class="fa fa-cogs"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="friends()">
+                        <i class="fa fa-users"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a ng-link="charts()">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="morris.html">Morris</a></li>
+                        <li><a  href="chartjs.html">Chartjs</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> Network Profil</h3>
+
+            <br/>
+
+            <center>
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                <h3 class="media-heading">Joe Sixpack <small>USA</small></h3>
+                <span><strong>Skills: </strong></span>
+                <span class="label label-warning">HTML5/CSS</span>
+                <span class="label label-info">Adobe CS 5.5</span>
+                <span class="label label-info">Microsoft Office</span>
+                <span class="label label-success">Windows XP, Vista, 7</span>
+            </center>
+            <hr>
+            <center>
+                <p class="text-left"><strong>Bio: </strong><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                <br>
+            </center>
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I've heard enough about Joe</button>
+                </center>
+            </div>
+
+        </section><! --/wrapper -->
+
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            2015 - betrance by GET-NET
+            <a href="panels.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+
