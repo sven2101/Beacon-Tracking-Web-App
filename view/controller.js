@@ -5,6 +5,7 @@
 'use strict';
 
 angular.module('app', [
+    'app.services',
     'app.beacons',
     'app.charts',
     'app.friends',

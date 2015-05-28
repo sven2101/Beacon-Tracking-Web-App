@@ -1,24 +1,6 @@
 'use strict';
 
 angular.module('app.welcome', ['ngResource'])
-    .factory('Users', ['$resource',
-        function($resource){
-            return $resource('/users', {}, {
-                query: {method:'GET', isArray:true}
-            });
-    }])
-    .factory('Login', ['$resource',
-        function($resource){
-            return $resource('/authorization', {}, {
-                save: {method:'POST'}
-            });
-    }])
-    .factory('Me', ['$resource',
-        function($resource){
-            return $resource('/me', {}, {
-                query: { method:'GET'}
-            });
-    }])
     .controller('WelcomeController', ['Users', 'Me', 'Login', '$location', function(Users, Me, Login, $location) {
 
         this.me = Me.query();

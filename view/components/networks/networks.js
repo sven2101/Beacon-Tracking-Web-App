@@ -1,19 +1,6 @@
 'use strict';
 
 angular.module('app.networks', ['ngResource'])
-    .factory('All_Networks', ['$resource',
-        function($resource){
-            return $resource('/networks', {}, {
-                query: {method:'GET', isArray:true}
-            });
-    }])
-    .factory('My_Networks', ['$resource',
-        function($resource){
-            return $resource('/networks/andreas.foitzik', {}, {
-                query:  {method:'GET', isArray:true},
-                save:   {method:'POST'}
-            });
-    }])
     .controller('NetworksController', ['All_Networks','My_Networks','Me', NetworksController]);
 
 function NetworksController(All_Networks, My_Networks, Me) {
